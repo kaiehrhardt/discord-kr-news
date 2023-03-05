@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	baseUrl = "https://www.nexon.com/kartdrift/de/news/"
+	baseUrl = "https://www.nexon.com/kartdrift/en/news/"
 )
 
 var (
@@ -34,7 +34,7 @@ func (n *News) AddPost(url string) {
 }
 
 func (n *News) Print() {
-	if len(n.Posts) <= 1 {
+	if len(n.Posts) < 1 {
 		log.Fatalln("Empty Posts?!")
 	} else {
 		log.Println(n.Posts)
@@ -76,13 +76,13 @@ func GetNews() *News {
 func main() {
 	dg, err := discordgo.New("Bot " + discordToken)
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 		return
 	}
 
-	_, err = dg.ChannelMessageSend(discordChannel, "KR-News für Channel aktiviert.")
+	_, err = dg.ChannelMessageSend(discordChannel, "KartRider news enabled.")
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 
 	initNews := GetNews()
@@ -95,7 +95,7 @@ func main() {
 
 		if len(diff) > 0 {
 			for _, news := range diff {
-				message := fmt.Sprintf("Es gibt eine neue News: %s", news)
+				message := fmt.Sprintf("There's a news: %s", news)
 				_, err = dg.ChannelMessageSend(discordChannel, message)
 				if err != nil {
 					log.Println(err)
