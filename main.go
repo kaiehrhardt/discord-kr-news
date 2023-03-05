@@ -45,7 +45,7 @@ func Compare(oldNews, newNews *News) (diffUrls []string) {
 	for i, post := range oldNews.Posts {
 		if post.Url != newNews.Posts[i].Url {
 			diffUrls = append(diffUrls, newNews.Posts[i].Url)
-			log.Println("Diff found. Old: %s New: %s", post.Url, newNews.Posts[i].Url)
+			log.Println("Diff found. Old: " + post.Url + " New: " + newNews.Posts[i].Url)
 		}
 	}
 	return diffUrls
@@ -80,7 +80,7 @@ func main() {
 		return
 	}
 
-	_, err = dg.ChannelMessageSend(discordChannel, fmt.Sprintf("KR-News für Channel aktiviert."))
+	_, err = dg.ChannelMessageSend(discordChannel, "KR-News für Channel aktiviert.")
 	if err != nil {
 		log.Println(err)
 	}
