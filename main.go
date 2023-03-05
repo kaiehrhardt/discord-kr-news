@@ -5,23 +5,25 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"strings"
 
-	"golang.org/x/net/html"
+	"github.com/PuerkitoBio/goquery"
 )
 
-const baseAnnouncementsUrl = "https://www.nexon.com/kartdrift/de/news/announcement"
+const (
+	baseUrl = "https://www.nexon.com/kartdrift/de/news/"
+)
 
 type News struct {
 	Posts []Post
 }
 
 type Post struct {
-	Url string
+	Url      string
+	Category string
 }
 
-func (n *News) AddPosts(url string) {
-	n.Posts = append(n.Posts, Post{Url: url})
+func (n *News) AddPost(url string, category string) {
+	n.Posts = append(n.Posts, Post{Url: url, Category: category})
 }
 
 func (n *News) Print() error {
@@ -35,30 +37,23 @@ func (n *News) Print() error {
 }
 
 func Init() *News {
+	var categories = []string{"announcement", "update", "ingameevent", "communityevent"}
 	n := &News{}
-	res, err := http.Get(baseAnnouncementsUrl + "/list")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer res.Body.Close()
-	htmlTokens := html.NewTokenizer(res.Body)
-loop:
-	for {
-		tt := htmlTokens.Next()
-		switch tt {
-		case html.ErrorToken:
-			break loop
-		case html.StartTagToken:
-			t := htmlTokens.Token()
-			isAnchor := t.Data == "a"
-			if isAnchor {
-				for _, v := range t.Attr {
-					if v.Key == "href" && strings.HasPrefix(v.Val, "view") {
-						n.AddPosts(baseAnnouncementsUrl + v.Val)
-					}
-				}
-			}
+	for _, category := range categories {
+		res, err := http.Get(baseUrl + category + "/list")
+		if err != nil {
+			log.Fatal(err)
 		}
+		defer res.Body.Close()
+		doc, err := goquery.NewDocumentFromReader(res.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		doc.Find(".board_list").Each(func(i int, s *goquery.Selection) {
+			url, _ := s.Find("a").Attr("href")
+			n.AddPost(baseUrl+category+"/"+url, category)
+		})
 	}
 	return n
 }
