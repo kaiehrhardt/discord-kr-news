@@ -7,13 +7,18 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    container: smartive/semantic-release-image:latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
         with:
           ssh-key: "${{ secrets.COMMIT_KEY }}"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
       - name: install semantic-release/github
         run: npm install semantic-release @semantic-release/github
       - name: semantic-release
-        run: semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
