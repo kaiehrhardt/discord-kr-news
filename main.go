@@ -101,6 +101,7 @@ func main() {
 					log.Println(err)
 				}
 			}
+			initNews = newNews
 		}
 
 		time.Sleep(checkInterval)
