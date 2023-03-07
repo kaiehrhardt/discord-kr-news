@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.6...1.2.7) (2023-03-07)
+
+
+### Bug Fixes
+
+* simulate chart change ([82cf8b0](https://github.com/kaiehrhardt/discord-kr-news/commit/82cf8b01defe6a53804581fb644f1d1f0085f76c))
+
 ## [1.2.6](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.5...1.2.6) (2023-03-07)
 
 
