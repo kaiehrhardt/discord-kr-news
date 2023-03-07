@@ -1,10 +1,11 @@
 {
   "branches": ["master"],
   "tagFormat": "${version}",
+  "repositoryUrl": "https://github.com/kaiehrhardt/discord-kr-news",
   "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      ["semantic-release-helm", {"chartPath": "./charts/discord-kr-news"}],
+      ["semantic-release-helm", {"chartPath": "./charts/discord-kr-news", "crPublish": true, "crConfigPath": ".cr.yaml" }],
       ["@semantic-release/changelog",{"changelogFile": "CHANGELOG.md"}],
       ["@semantic-release/git", {
         "assets": ["charts/discord-kr-news/Chart.yaml", "CHANGELOG.md"],
