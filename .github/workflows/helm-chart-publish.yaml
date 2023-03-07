@@ -2,12 +2,13 @@ name: release helm chart
 
 on:
   push:
-    branches:
-      - master
-      - main
+    tags:
+      - '**'
 
 jobs:
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

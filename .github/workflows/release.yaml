@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: "lts/*"
       - name: install semantic-release/github
-        run: npm install semantic-release @semantic-release/github
+        run: npm install semantic-release @semantic-release/github semantic-release-helm
       - name: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

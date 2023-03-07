@@ -3,6 +3,7 @@
   "tagFormat": "${version}",
   "plugins": [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator"
+      "@semantic-release/release-notes-generator",
+      ["semantic-release-helm", {"chartPath": "./charts/discord-kr-news"}]
   ]
 }
