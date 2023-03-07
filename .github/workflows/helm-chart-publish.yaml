@@ -3,6 +3,7 @@ name: release helm chart
 on:
   push:
     branches:
+      - master
       - main
 
 jobs:
