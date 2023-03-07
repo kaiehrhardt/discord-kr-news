@@ -4,6 +4,12 @@
   "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      ["semantic-release-helm", {"chartPath": "./charts/discord-kr-news"}]
+      ["semantic-release-helm", {"chartPath": "./charts/discord-kr-news"}],
+      ["@semantic-release/changelog",{"changelogFile": "CHANGELOG.md"}],
+      ["@semantic-release/git", {
+        "assets": ["charts/discord-kr-news/Chart.yaml", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }]
+
   ]
 }
