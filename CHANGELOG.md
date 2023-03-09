@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.8...1.2.9) (2023-03-09)
+
+
+### Bug Fixes
+
+* some misc changes ([d3b1288](https://github.com/kaiehrhardt/discord-kr-news/commit/d3b1288d4ab07b4412129aeaf9402324b03d52cb))
+
 ## [1.2.8](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.7...1.2.8) (2023-03-09)
 
 
