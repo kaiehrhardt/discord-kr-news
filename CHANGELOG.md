@@ -3,6 +3,14 @@
 
 ### Bug Fixes
 
+* reset to cr github action ([1fb7fa4](https://github.com/kaiehrhardt/discord-kr-news/commit/1fb7fa4090adf5eb3b42b7db97a00de98fa15aca))
+* try with full semantic release cr publishing ([446bf85](https://github.com/kaiehrhardt/discord-kr-news/commit/446bf85b59c7ba7ef3d93945cf36ad5704bdccb0))
+
+## [1.2.8](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.7...1.2.8) (2023-03-09)
+
+
+### Bug Fixes
+
 * try with full semantic release cr publishing ([446bf85](https://github.com/kaiehrhardt/discord-kr-news/commit/446bf85b59c7ba7ef3d93945cf36ad5704bdccb0))
 
 ## [1.2.7](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.6...1.2.7) (2023-03-07)
