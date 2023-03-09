@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.9...1.2.10) (2023-03-09)
+
+
+### Bug Fixes
+
+* add ci deps ([0c6497e](https://github.com/kaiehrhardt/discord-kr-news/commit/0c6497e1c78abbb8270d197b8e7706ec49381797))
+
 ## [1.2.9](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.8...1.2.9) (2023-03-09)
 
 
