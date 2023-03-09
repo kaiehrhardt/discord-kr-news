@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   discord-kr-news:
   - apiVersion: v2
+    appVersion: 1.2.8
+    created: "2023-03-09T00:42:45.135562465Z"
+    description: A Helm chart for Kubernetes
+    digest: c7618df511552b642c292842732c56d569f060239a66cf36b0176f0d3829d6e3
+    name: discord-kr-news
+    type: application
+    urls:
+    - https://github.com/kaiehrhardt/discord-kr-news/releases/download/discord-kr-news-1.2.8/discord-kr-news-1.2.8.tgz
+    version: 1.2.8
+  - apiVersion: v2
     appVersion: 1.2.6
     created: "2023-03-07T01:54:15.909561107Z"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/kaiehrhardt/discord-kr-news/releases/download/discord-kr-news-1.2.6/discord-kr-news-1.2.6.tgz
     version: 1.2.6
-generated: "2023-03-07T01:54:15.909567107Z"
+generated: "2023-03-09T00:42:45.135575466Z"
