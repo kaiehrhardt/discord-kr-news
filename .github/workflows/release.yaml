@@ -7,8 +7,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    # permissions:
-    #   contents: write
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -19,8 +17,8 @@ jobs:
         with:
           node-version: "lts/*"
       - name: install semantic-release/github
-        run: npm install semantic-release @semantic-release/github @semantic-release/git @semantic-release/changelog semantic-release-helm
+        run: npm install semantic-release @semantic-release/github @semantic-release/git @semantic-release/changelog
       - name: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --debug
+        run: npx semantic-release
