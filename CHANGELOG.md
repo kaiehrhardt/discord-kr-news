@@ -1,3 +1,11 @@
+## [1.2.14](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.13...1.2.14) (2023-03-10)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 2 to 3 ([31cfa68](https://github.com/kaiehrhardt/discord-kr-news/commit/31cfa68150933fd616659dd5e2abc23381145697))
+* **deps:** bump golangci/golangci-lint-action from 2 to 3 ([5ec355b](https://github.com/kaiehrhardt/discord-kr-news/commit/5ec355ba7f797e6e3fb65d440a5cc9d3bf4fd968))
+
 ## [1.2.13](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.12...1.2.13) (2023-03-10)
 
 
