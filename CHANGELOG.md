@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.10...1.2.11) (2023-03-10)
+
+
+### Bug Fixes
+
+* add auto dep check ([6ff5e4e](https://github.com/kaiehrhardt/discord-kr-news/commit/6ff5e4e668f183c7e97429b8a76ed89826bcd601))
+
 ## [1.2.10](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.9...1.2.10) (2023-03-09)
 
 
