@@ -1,3 +1,10 @@
+## [1.2.13](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.12...1.2.13) (2023-03-10)
+
+
+### Bug Fixes
+
+* **deps:** bump golang from 1.19-alpine to 1.20-alpine ([54637c1](https://github.com/kaiehrhardt/discord-kr-news/commit/54637c1fc219bd016f17fa1a2535ace9d308e4ee))
+
 ## [1.2.12](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.11...1.2.12) (2023-03-10)
 
 
