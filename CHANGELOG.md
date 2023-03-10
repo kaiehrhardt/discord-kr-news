@@ -1,3 +1,10 @@
+## [1.2.12](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.11...1.2.12) (2023-03-10)
+
+
+### Bug Fixes
+
+* **deps:** bump github.com/bwmarrin/discordgo from 0.27.0 to 0.27.1 ([34e657e](https://github.com/kaiehrhardt/discord-kr-news/commit/34e657e7b8922b72ddb8daf4721f2b278281dab5))
+
 ## [1.2.11](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.10...1.2.11) (2023-03-10)
 
 
