@@ -82,7 +82,7 @@ func main() {
 
 	_, err = dg.ChannelMessageSend(discordChannel, "KartRider news enabled.")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("Token not valid: ", err)
 	}
 
 	initNews := GetNews()

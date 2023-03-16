@@ -8,4 +8,4 @@ COPY --from=build /app/discord-kr-news /
 ENV KRN_DISCORD_TOKEN=dummy
 ENV KRN_DISCORD_CHANNEL=dummy
 ENV KRN_CHECK_INTERVAL=600s
-ENTRYPOINT ["discord-kr-news"]
+ENTRYPOINT ["/discord-kr-news"]
