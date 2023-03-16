@@ -1,3 +1,10 @@
+## [1.2.15](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.14...1.2.15) (2023-03-16)
+
+
+### Bug Fixes
+
+* dockerfile entrypoint ([658be9a](https://github.com/kaiehrhardt/discord-kr-news/commit/658be9a277030efd20254c8df08661a6cceeea18))
+
 ## [1.2.14](https://github.com/kaiehrhardt/discord-kr-news/compare/1.2.13...1.2.14) (2023-03-10)
 
 
